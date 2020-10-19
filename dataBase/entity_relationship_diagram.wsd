@@ -1,0 +1,39 @@
+@startuml
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity Columns{
+  id: int //AUTO INCREMENT// <<PK>>
+  --
+  name: varchar(50) //NOT NULL//
+  position: int //NOT NULL//
+}
+
+entity Tasks{
+  id: int //AUTO INCREMENT// <<PK>>
+  --
+  columnId: int //NOT NULL// <<FK>>
+  userId: int //NULL// <<FK>>
+  name: varchar(50) //NOT NULL//
+  content: varchar(50) //NULL//
+  position: int //NOT NULL//
+  priority: enum(1, 2, 3, 4, 5) //NOT NULL//
+  delivery: date //NOT NULL//
+  effort: enum(1, 2, 3, 4, 5) //NOT NULL//
+  impact: enum(1, 2, 3, 4, 5) //NOT NULL//
+}
+
+entity Users {
+  id: int //AUTO INCREMENT// <<PK>>
+  --
+  name: varchar(50) //NOT NULL//
+  email: varchar(50) //NOT NULL//
+  password: varchar(50) //NOT NULL//
+}
+
+Tasks }o--|| Columns
+Tasks }o--o| Users
+@enduml
