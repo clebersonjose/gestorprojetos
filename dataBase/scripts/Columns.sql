@@ -3,5 +3,6 @@ CREATE TABLE Columns (
   name VARCHAR(50) NOT NULL,
   position INT NOT NULL,
 
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  UNIQUE (id)
 );

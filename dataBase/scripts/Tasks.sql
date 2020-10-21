@@ -18,5 +18,7 @@ CREATE TABLE Tasks (
     REFERENCES Columns(id),
 
   FOREIGN KEY (userId)
-    REFERENCES Users(id)
+    REFERENCES Users(id),
+
+  UNIQUE (id)
 );
