@@ -6,17 +6,17 @@ hide circle
 skinparam linetype ortho
 
 entity Columns{
-  id: int //AUTO INCREMENT// <<PK>>
+  #id: int //AUTO INCREMENT// //UNIQUE// <<PK>>
   --
   name: varchar(50) //NOT NULL//
   position: int //NOT NULL//
 }
 
 entity Tasks{
-  id: int //AUTO INCREMENT// <<PK>>
+  #id: int //AUTO INCREMENT// //UNIQUE// <<PK>>
   --
-  columnId: int //NOT NULL// <<FK>>
-  userId: int //NULL// <<FK>>
+  +columnId: int //NOT NULL// <<FK>>
+  +userId: int //NULL// <<FK>>
   name: varchar(50) //NOT NULL//
   content: varchar(50) //NULL//
   position: int //NOT NULL//
@@ -27,10 +27,10 @@ entity Tasks{
 }
 
 entity Users {
-  id: int //AUTO INCREMENT// <<PK>>
+  #id: int //AUTO INCREMENT// //UNIQUE// <<PK>>
   --
   name: varchar(50) //NOT NULL//
-  email: varchar(50) //NOT NULL//
+  email: varchar(50) //NOT NULL// //UNIQUE//
   password: varchar(50) //NOT NULL//
 }
 
