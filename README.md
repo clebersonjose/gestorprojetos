@@ -10,3 +10,7 @@ O banco de dados usa PostgreSQL como SGBD.
 O Back-end da aplicação é uma API construida em NodeJS, usando Express e escrita em TypeScript.
 
 [Repositório do Back-end >](https://github.com/clebersonjose/GestorProjetosServer)
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
