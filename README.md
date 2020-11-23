@@ -1,6 +1,9 @@
 # Gestor de Projetos
 Projeto Integrado do cursos de Tecnologia de Analise e Desenvolvimento de Sistemas.
 
+## Descrição
+Aplicação web de gestão de atividades e projetos, que usa como inspiração a metodologia Kanban, porém as atividades são ordenadas com base nas suas características atribuídas, como: nível de prioridade, impacto no projeto e etc.
+
 ## Data Base
 O banco de dados usa PostgreSQL como SGBD.
 
